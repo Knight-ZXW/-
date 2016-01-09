@@ -53,7 +53,7 @@ public class ImageAdapter extends BaseAdapter {
 
     @Override
     public View getView(final int position, View convertView, ViewGroup parent) {
-        ViewHolder viewHolder = null;
+        final ViewHolder viewHolder;
         if (convertView == null){
             convertView = mInflater.inflate(R.layout.item_girdview,parent,false);
             viewHolder = new ViewHolder();
@@ -64,26 +64,32 @@ public class ImageAdapter extends BaseAdapter {
         } else {
             viewHolder = (ViewHolder) convertView.getTag();
         }
-        Log.w("logger","getView");
+        Log.w("logger", "getView");
 //        //重置状态
         viewHolder.mImg.setImageResource(R.mipmap.pictures_no);
-//        viewHolder.mSelect.setImageResource(R.mipmap.picture_unselected);
-//        viewHolder.mImg.setColorFilter(null);
+        viewHolder.mSelect.setImageResource(R.mipmap.picture_unselected);
+        viewHolder.mImg.setColorFilter(null);
         final String  filepath = mDirPath + "/" + mImgPath.get(position);
 
-        final ViewHolder finalViewHolder = viewHolder;
-        viewHolder.mImg.setOnClickListener(new View.OnClickListener() {
+        if (mSeletedImg.contains(filepath)){
+            viewHolder.mSelect.setImageResource(R.mipmap.pictures_selected);
+            viewHolder.mImg.setColorFilter(Color.parseColor("#77000000"));
+
+        }
+
+
+            viewHolder.mImg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 //已经被选择
                 if (mSeletedImg.contains(filepath)) {
                     mSeletedImg.remove(filepath);
-                    finalViewHolder.mImg.setColorFilter(null);
-                    finalViewHolder.mSelect.setImageResource(R.mipmap.picture_unselected);
+                    viewHolder.mImg.setColorFilter(null);
+                    viewHolder.mSelect.setImageResource(R.mipmap.picture_unselected);
                 } else {
                     mSeletedImg.add(filepath);
-                    finalViewHolder.mImg.setColorFilter(Color.parseColor("#77000000"));
-                    finalViewHolder.mSelect.setImageResource(R.mipmap.pictures_selected);
+                    viewHolder.mImg.setColorFilter(Color.parseColor("#77000000"));
+                    viewHolder.mSelect.setImageResource(R.mipmap.pictures_selected);
                 }
             }
         });
