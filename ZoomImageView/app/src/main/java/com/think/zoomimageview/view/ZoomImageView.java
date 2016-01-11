@@ -19,6 +19,28 @@ import android.widget.ImageView;
  * Created by ${XiuWuZhuo} on 2016/1/9.
  * Emial:nimdanoob@163.com
  */
+
+//实现思路
+    //1.实现功能，图片的居中显示，图片的放大缩小，手势判断，手指触摸图片移动，边界判断， 缓慢地放大缩小
+    //1.图片居中 考虑到 何时图片才真正layout到布局上？ 系统提供了 ViewTreeObserver.我们实现OnGlobalLayoutListnern
+    //  在onAttachToWindow中注册接口，detachFromWindow中移除监听接口。
+    //  onLayout中 获得图片的信息 ,getDrwable getIntrinsicWidth.方法获得宽高，与View的宽高比较进行缩放放大。
+
+    //tip 如果进行缩放放大 ，一切的变化其实都是Matrix运用到View上形成的
+    //          ImageView 有个SetImageMatrix方法，Matrix提供了 很多放大 平移的API
+
+    // 2 平移 缩放实现后，考虑如何判断手的动作进行缩放，有个接口 OnScaleGestureListener
+    // 3. 放大后缩小时，遇到了缩小后中心点不对的状况，此时应该在Matrix使用之前，进行Matrix的预估，
+    // 判断这个Matrix运用后它的位置是什么样子的，然后对这个 Matrix进行平移的操作，再使用到 ImageView上
+    // code:
+    //    RectF rectf = new Rectf;
+    //    rectf初始化成你需要判断的View的信息
+    //    matrix.mapRectf(rectf)
+
+    // 4.边界判断的一些code 直接看代码，没什么难点
+    // 5.解决事件冲突 code
+
+
 public class ZoomImageView extends ImageView implements ViewTreeObserver.OnGlobalLayoutListener
         , ScaleGestureDetector.OnScaleGestureListener,View.OnTouchListener {
     //1.如何捕获到Image加载完成的事件 -> OnGlobalLayoutListener()
@@ -363,6 +385,7 @@ public class ZoomImageView extends ImageView implements ViewTreeObserver.OnGloba
             case MotionEvent.ACTION_MOVE:
                 float dx = x - mLastX;
                 float dy = y - mLastY;
+                //todo  为什么这边也要事件拦截，不是说事件拦截是一个序列吗
                 if (rectF.width() > getWidth() +0.01 || rectF.height() > getHeight() + 0.01){
                     if (getParent() instanceof ViewGroup) {
                         getParent().requestDisallowInterceptTouchEvent(true);
