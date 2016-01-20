@@ -1,5 +1,7 @@
 package com.think.zoomimageview;
 
+import android.graphics.Bitmap;
+import android.graphics.Matrix;
 import android.os.Bundle;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
@@ -22,7 +24,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         mViewPager = (ViewPager) findViewById(R.id.viewPager);
-
         mViewPager.setAdapter(new PagerAdapter() {
             @Override
             public int getCount() {
@@ -35,7 +36,11 @@ public class MainActivity extends AppCompatActivity {
                 imageView.setImageResource(mImgs[position]);
                 container.addView(imageView);
                 mImgViews[position] = imageView;
+                Matrix matrix1 = imageView.getMatrix();
+                Matrix matrix = new Matrix();
+                matrix.postScale(1, 1);
                 return imageView;
+
             }
 
             @Override

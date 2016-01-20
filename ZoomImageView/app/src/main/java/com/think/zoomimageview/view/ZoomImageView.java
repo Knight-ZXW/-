@@ -108,7 +108,6 @@ public class ZoomImageView extends ImageView implements ViewTreeObserver.OnGloba
         mTouchSlop = ViewConfiguration.get(context).getScaledTouchSlop();
         //todo tip4 该方法也可在xml配置
         setScaleType(ScaleType.MATRIX);
-
         mScaleGestureDetector = new ScaleGestureDetector(context,this);
         setOnTouchListener(this);
         mGestureDetector = new GestureDetector(context,new GestureDetector.SimpleOnGestureListener(){
