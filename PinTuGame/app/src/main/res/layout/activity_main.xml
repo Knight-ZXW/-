@@ -8,12 +8,43 @@
     tools:context="com.think.pintugame.MainActivity"
     >
 
-    <!--<com.think.pintugame.view.GamePintuLayout-->
-    <!--android:layout_width="match_parent"-->
-    <!--android:layout_height="match_parent"-->
-    <!--android:layout_centerInParent="true"-->
-    <!--android:layout_centerHorizontal="true"-->
-    <!--/>-->
+    <com.think.pintugame.view.GamePintuLayout
+        android:id="@+id/id_gamePintu"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_centerInParent="true"
+    android:layout_centerHorizontal="true"
+    />
 
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/id_gamePintu"
+        android:layout_marginRight="3dp"
+        >
+        <TextView
+            android:id="@+id/id_level"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:background="@drawable/bg_text"
+            android:gravity="center"
+            android:padding="4dp"
+            android:text="1"
+            />
+        <TextView
+            android:id="@+id/id_time"
+            android:layout_width="70dp"
+            android:layout_alignParentRight="true"
+            android:layout_height="70dp"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:background="@drawable/bg_text"
+            android:gravity="center"
+            android:padding="4dp"
+            android:text="1"
+            />
+    </RelativeLayout>
 
 </RelativeLayout>
