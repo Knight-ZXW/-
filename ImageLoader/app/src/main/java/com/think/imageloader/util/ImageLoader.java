@@ -6,6 +6,7 @@ import android.os.Handler;
 import android.os.Looper;
 import android.os.Message;
 import android.util.DisplayMetrics;
+import android.util.Log;
 import android.util.LruCache;
 import android.view.ViewGroup;
 import android.widget.ImageView;
@@ -87,7 +88,8 @@ public class ImageLoader {
                     @Override
                     public void handleMessage(Message msg) {
                         //线程池执行执行任务。
-                        mThreadPool.execute(getTask());
+                        Runnable task = getTask();
+                        mThreadPool.execute(task);
                         try {
                             mSemaphoreThreadPool.acquire();
                         } catch (InterruptedException e) {
@@ -210,6 +212,8 @@ public class ImageLoader {
                 value = fieldVale;
             }
         } catch (Exception e) {
+            //如果没有设置这个的话，或出错，捕获它，返回0
+            Log.e("logger","file:"+fieldName+" get caught exception");
             e.printStackTrace();
         }
         return value;
@@ -345,9 +349,10 @@ public class ImageLoader {
      * @return
      */
     private Runnable getTask(){
-        if (mType == Type.FIFO){
+
+        if (mType == Type.FIFO && mTaskQueue.size()!=0){
             return mTaskQueue.removeFirst();
-        } else if (mType == Type.LIFO){
+        } else if (mType == Type.LIFO && mTaskQueue.size()!=0){
             return mTaskQueue.removeLast();
         }
         return null;

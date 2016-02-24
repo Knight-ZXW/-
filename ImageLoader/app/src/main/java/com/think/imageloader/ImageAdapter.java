@@ -76,11 +76,10 @@ public class ImageAdapter extends BaseAdapter {
             viewHolder.mImg.setColorFilter(Color.parseColor("#77000000"));
 
         }
-
-
             viewHolder.mImg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Log.w("logger","you click the file"+filepath);
                 //已经被选择
                 if (mSeletedImg.contains(filepath)) {
                     mSeletedImg.remove(filepath);

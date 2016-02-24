@@ -78,8 +78,9 @@ public class MainActivity extends AppCompatActivity {
                     public boolean accept(File dir, String filename) {
                         if (filename.endsWith(".jpg")
                                 || filename.endsWith(".jpeg")
-                                || filename.endsWith("png"))
-                            return true;
+                                || filename.endsWith(".png")) {
+                                return true;
+                        }
                         return false;
                     }
 
@@ -198,7 +199,7 @@ public class MainActivity extends AppCompatActivity {
                         public boolean accept(File dir, String filename) {
                             if (filename.endsWith(".jpg")
                                     || filename.endsWith(".jpeg")
-                                    || filename.endsWith("png"))
+                                    || filename.endsWith(".png"))
                                 return true;
                             return false;
                         }
