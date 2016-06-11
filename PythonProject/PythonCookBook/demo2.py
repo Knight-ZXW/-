@@ -10,7 +10,7 @@ def search (lines, pattern, history = 5):
         previous_lines.append(line)
 
 if __name__ == '__main__':
-    with open('teset.txt') as f:
+    with open('test.html') as f:
         for line, prevlinews in search(f, 'python', 5):
             for pline in prevlinews:
                 print(pline,end =' ')
