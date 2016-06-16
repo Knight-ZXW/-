@@ -1,0 +1,1364 @@
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+
+
+<script type="text/javascript" src="/gw/w/js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="/gw/w/js/jquery.imgBanner.js"></script>
+<script type="text/javascript" src="/gw/w/js/jquery.datetimepicker.js"></script>
+<script type="text/javascript" src="/js/jquery-common-1.0.0.js"></script>
+<link rel="stylesheet" type="text/css" href="/gw/w/css/global.css">
+<link rel="stylesheet" type="text/css" href="/gw/w/css/style.css">
+<link rel="stylesheet" type="text/css" href="/gw/w/css/jquery.datetimepicker.css">
+<link rel="shortcut icon" href="/gw/w/images/kaiyuan.ico" type="image/x-icon">
+    <title>开元酒店集团</title>
+<style>
+    #chooseCityArea div{
+        display:none;
+    }
+    #chooseCityArea div.current{
+        display:block;
+    }
+    .otherSearch .otherBox dl dd .placeBox .destination_1 #chooseCityArea a{
+        white-space:normal;
+        float:left;
+        width:48px;
+    }
+    #wqd p{
+        font-size:12px;
+        padding-bottom:10px;
+    }
+</style></head>
+
+<body>
+
+
+
+
+<div class="headTop clearfix">
+    <div class="logo"><a href="/web/index.htm"><img src="/gw/w/images/logo.jpg" width="162" height="64" alt=""></a></div>
+    <div class="show"><a href="http://www.kaiyuanhotels.com/web/freeTour/index.htm?freeTour.freeTourType.id=512" target="_blank"><img src="/uploads/GW_ADVERTISEMENT_PIC_A/1606011601224154.jpg" width="322" height="57">
+    </a></div>
+    <div class="rightIc clearfix">
+        <dl class="clearfix" onclick="toMobile()" style="cursor:pointer;">
+            <dt class="icon_1">手机专享</dt>
+            <dd>手机专享<strong>开元商祺会</strong></dd>
+        </dl>
+        <dl class="clearfix" onclick="toConnection()" style="cursor:pointer;">
+            <dt class="icon_2">客服电话</dt>
+            <dd>7×24客服电话<span>1010-5050</span></dd>
+        </dl>
+    </div>
+
+
+
+</div>
+<div class="navBg">
+    <div class="webMain clearfix">
+        <div class="nav">
+            <a href="/web/index.htm">首页</a>
+            <a href="/web/hotel/brand.htm">品牌与酒店</a>
+            <a href="/web/freeTour/index.htm">自由行团购</a>
+            <a href="/web/recommend/show.htm?id=21">特色主题房</a>
+            <a href="/web/recommend/index.htm">限时促销</a>
+            <a href="http://eb.kaiyuanhotels.com/" target="_blank">开元智造<span class="new"></span></a>
+            <a href="/web/about/context.htm?param=ABOUT" class="noBorder">关于开元</a>
+        </div>
+        <div class="userAbout">
+
+
+                <a href="javascript:void(0)" id="loginBtn">登录|注册</a>
+                <a href="/web/about/aboutKaiyuan.htm?context.contextTypeEnum=PROFILE">商祺会<em class="new"></em></a>
+
+
+            <a href="/web/gift/index.htm" class="noBorder">积分商城</a>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    $("#logOffBtn").click(function(){
+       window.location.href = "/web/index/logOff.htm";
+    });
+    $("#loginBtn").click(function() {
+        openLoginDialog();
+    });
+
+    function openLoginDialog() {
+        $("#gray,#loginBox").show();
+        $("#loginBox .loginChoose a.sBtn").removeClass("current");
+        $("#loginBox .loginChoose a.sBtn").eq(0).addClass("current");
+        $("#loginBox .loginChoose a.sBtn").parents("#loginBox").find(".show").hide();
+        $("#loginBox .loginChoose a.sBtn").parents("#loginBox").find(".show").eq(0).show();
+    }
+
+    function toMobile() {
+        window.location.href = "/web/about/context.htm?param=testese";
+    }
+
+    function toConnection() {
+        window.location.href = "/web/about/context.htm?param=contact";
+    }
+</script>
+
+<div class="webMain">
+    <div class="home">
+        <div class="crumbs">
+            <a href="/web/index.htm">首页</a>&gt;<span>品牌与酒店</span>
+        </div>
+        <div class="clearfix showLoving vipAbout">
+            <div class="homeNav">
+
+                <div class="otherSearch">
+                    <h2>酒店预订</h2>
+                    <div class="otherBox">
+                        <dl class="clearfix">
+                            <dt>目的地</dt>
+                            <dd>
+                                <div class="placeBox faBox_1">
+                                    <input type="text" class="textIn textIn_1" id="citySearch" autocomplete="off">
+                                    <div class="posBox destination_1">
+                                        <h4><a href="javascript:void(0)" class="close">×</a>支持中文/拼音/简拼输入</h4>
+                                        <h3>搜索历史</h3>
+                                        <div class="history clearfix">
+
+                                        <a href="javascript:void(0)" onclick="historyCityClick(this)">杭州市</a></div>
+                                        <div class="choose">
+                                            <a href="javascript:void(0)" class="current">热门</a>
+                                            <a href="javascript:void(0)">ABCDEF</a>
+                                            <a href="javascript:void(0)">GHIJ</a>
+                                            <a href="javascript:void(0)">KLMN</a>
+                                            <a href="javascript:void(0)">OPQRSTW</a>
+                                            <a href="javascript:void(0)">XYZ</a>
+                                        </div>
+                                        <div id="chooseCityArea">
+                                            <div id="city0" class="current">
+
+                                                    <a href="javascript:void(0)" onclick="historyCityClick(this)">长春市</a>
+
+                                                    <a href="javascript:void(0)" onclick="historyCityClick(this)">杭州市</a>
+
+                                                    <a href="javascript:void(0)" onclick="historyCityClick(this)">宁波市</a>
+
+                                                    <a href="javascript:void(0)" onclick="historyCityClick(this)">宁海市</a>
+
+                                                    <a href="javascript:void(0)" onclick="historyCityClick(this)">北京市</a>
+
+                                                    <a href="javascript:void(0)" onclick="historyCityClick(this)">千岛湖</a>
+
+                                                    <a href="javascript:void(0)" onclick="historyCityClick(this)">上海市</a>
+
+                                                    <a href="javascript:void(0)" onclick="historyCityClick(this)">绍兴市</a>
+
+                                                    <a href="javascript:void(0)" onclick="historyCityClick(this)">桐庐市</a>
+
+                                                    <a href="javascript:void(0)" onclick="historyCityClick(this)">徐州市</a>
+
+                                                    <a href="javascript:void(0)" onclick="historyCityClick(this)">湖州市</a>
+
+                                                    <a href="javascript:void(0)" onclick="historyCityClick(this)">余姚市</a>
+
+                                                    <a href="javascript:void(0)" onclick="historyCityClick(this)">三亚市</a>
+
+                                                    <a href="javascript:void(0)" onclick="historyCityClick(this)">西安市</a>
+
+                                                    <a href="javascript:void(0)" onclick="historyCityClick(this)">三清山</a>
+
+                                                    <a href="javascript:void(0)" onclick="historyCityClick(this)">长兴县</a>
+
+                                                    <a href="javascript:void(0)" onclick="historyCityClick(this)">棋子湾</a>
+
+                                            </div>
+                                            <div id="city1" class="clearfix"><a href="javascript:void(0)" onclick="historyCityClick(this)">北京市</a><a href="javascript:void(0)" onclick="historyCityClick(this)">北海市</a><a href="javascript:void(0)" onclick="historyCityClick(this)">成都市</a><a href="javascript:void(0)" onclick="historyCityClick(this)">常州市</a><a href="javascript:void(0)" onclick="historyCityClick(this)">长春市</a><a href="javascript:void(0)" onclick="historyCityClick(this)">长兴县</a><a href="javascript:void(0)" onclick="historyCityClick(this)">德清市</a><a href="javascript:void(0)" onclick="historyCityClick(this)">德阳市</a></div><div id="city2" class="clearfix"><a href="javascript:void(0)" onclick="historyCityClick(this)">贵阳市</a><a href="javascript:void(0)" onclick="historyCityClick(this)">湖州市</a><a href="javascript:void(0)" onclick="historyCityClick(this)">杭州市</a><a href="javascript:void(0)" onclick="historyCityClick(this)">淮安市</a><a href="javascript:void(0)" onclick="historyCityClick(this)">合肥市</a><a href="javascript:void(0)" onclick="historyCityClick(this)">海宁市</a><a href="javascript:void(0)" onclick="historyCityClick(this)">海盐市</a><a href="javascript:void(0)" onclick="historyCityClick(this)">句容市</a><a href="javascript:void(0)" onclick="historyCityClick(this)">金华市</a><a href="javascript:void(0)" onclick="historyCityClick(this)">景德镇市</a><a href="javascript:void(0)" onclick="historyCityClick(this)">简阳市</a></div><div id="city3" class="clearfix"><a href="javascript:void(0)" onclick="historyCityClick(this)">开封市</a><a href="javascript:void(0)" onclick="historyCityClick(this)">拉萨市</a><a href="javascript:void(0)" onclick="historyCityClick(this)">丽水市</a><a href="javascript:void(0)" onclick="historyCityClick(this)">龙岩市</a><a href="javascript:void(0)" onclick="historyCityClick(this)">连云港市</a><a href="javascript:void(0)" onclick="historyCityClick(this)">乐山市</a><a href="javascript:void(0)" onclick="historyCityClick(this)">南京市</a><a href="javascript:void(0)" onclick="historyCityClick(this)">宁海市</a><a href="javascript:void(0)" onclick="historyCityClick(this)">宁波市</a><a href="javascript:void(0)" onclick="historyCityClick(this)">南昌市</a><a href="javascript:void(0)" onclick="historyCityClick(this)">南浔市</a></div><div id="city4" class="clearfix"><a href="javascript:void(0)" onclick="historyCityClick(this)">普洱市</a><a href="javascript:void(0)" onclick="historyCityClick(this)">千岛湖</a><a href="javascript:void(0)" onclick="historyCityClick(this)">棋子湾</a><a href="javascript:void(0)" onclick="historyCityClick(this)">荣成市</a><a href="javascript:void(0)" onclick="historyCityClick(this)">绍兴市</a><a href="javascript:void(0)" onclick="historyCityClick(this)">上海市</a><a href="javascript:void(0)" onclick="historyCityClick(this)">三亚市</a><a href="javascript:void(0)" onclick="historyCityClick(this)">三清山</a><a href="javascript:void(0)" onclick="historyCityClick(this)">上虞市</a><a href="javascript:void(0)" onclick="historyCityClick(this)">泗阳市</a><a href="javascript:void(0)" onclick="historyCityClick(this)">苏州市</a><a href="javascript:void(0)" onclick="historyCityClick(this)">台州市</a><a href="javascript:void(0)" onclick="historyCityClick(this)">铜陵市</a><a href="javascript:void(0)" onclick="historyCityClick(this)">唐山市</a><a href="javascript:void(0)" onclick="historyCityClick(this)">天津市</a><a href="javascript:void(0)" onclick="historyCityClick(this)">桐庐市</a><a href="javascript:void(0)" onclick="historyCityClick(this)">无锡市</a><a href="javascript:void(0)" onclick="historyCityClick(this)">温州市</a></div><div id="city5" class="clearfix"><a href="javascript:void(0)" onclick="historyCityClick(this)">徐州市</a><a href="javascript:void(0)" onclick="historyCityClick(this)">新乡市</a><a href="javascript:void(0)" onclick="historyCityClick(this)">西安市</a><a href="javascript:void(0)" onclick="historyCityClick(this)">襄阳市</a><a href="javascript:void(0)" onclick="historyCityClick(this)">义乌市</a><a href="javascript:void(0)" onclick="historyCityClick(this)">余姚市</a><a href="javascript:void(0)" onclick="historyCityClick(this)">烟台市</a><a href="javascript:void(0)" onclick="historyCityClick(this)">诸暨市</a><a href="javascript:void(0)" onclick="historyCityClick(this)">枣庄市</a><a href="javascript:void(0)" onclick="historyCityClick(this)">株洲市</a><a href="javascript:void(0)" onclick="historyCityClick(this)">自贡市</a></div>
+                                        </div>
+
+                                    </div>
+                                    <div class="posBox destination_2">
+                                        <h4><a href="javascript:void(0)" class="close">×</a>hz，若需缩小范围，请输入更多条件。</h4>
+                                        <ul>
+
+                                        </ul>
+
+
+
+
+
+
+
+                                    </div>
+                                </div>
+                            </dd>
+                        </dl>
+                        <dl class="clearfix">
+                            <dt>入住时期</dt>
+                            <dd>
+                                <input type="text" class="textIn icon" id="startTime">
+                            </dd>
+                        </dl>
+                        <dl class="clearfix">
+                            <dt>退房时期</dt>
+                            <dd>
+                                <input type="text" class="textIn icon" id="endTime">
+                            </dd>
+                        </dl>
+                        <dl class="clearfix">
+                            <dt>关键词</dt>
+                            <dd>
+                                <input type="text" id="keyword" name="keyword" class="textIn">
+                            </dd>
+                        </dl>
+                        <dl class="clearfix">
+                            <dt>&nbsp;</dt>
+                            <dd>
+                                <input type="checkbox" id="companyCodeChk">
+                                <label for="companyCodeChk">企业或推广代码？</label>
+                            </dd>
+                        </dl>
+                        <dl class="clearfix">
+                            <dt>&nbsp;</dt>
+                            <dd><input type="text" class="textIn" id="companyCode"></dd>
+                        </dl>
+                        <dl class="clearfix">
+                            <dt>&nbsp;</dt>
+                            <dd><a href="javascript:void(0)" class="btn">搜索</a></dd>
+                        </dl>
+                    </div>
+                </div>
+
+                <div class="showImg">
+
+                        <a href="#"><img src="/uploads/GW_ADVERTISEMENT_PIC_A/1509241750388067.jpg" width="206" height="123"></a>
+
+                        <a href="http://www.kaiyuanhotels.com/web/recommend/show.htm?id=32"><img src="/uploads/GW_ADVERTISEMENT_PIC_A/1602291113497365.jpg" width="206" height="123"></a>
+
+                </div>
+            </div>
+            <div class="about802">
+                <div class="mainPro">
+                    <form action="#" method="post" id="form">
+                        <input type="hidden" value="2" name="hotelUtil.brand.id" id="brandId">
+                        <input type="hidden" id="pageNo" value="3" name="pageNo">
+                        <input type="hidden" value="10" name="pageSize" id="pageSize">
+                    </form>
+
+                        <div class="show" style="display: none;">
+                            <div class="img_slider">
+                                <div class="slider_content" style="width: 794px;">
+                                    <div class="each">
+                                        <img src="/uploads/GW_ADVERTISEMENT_PIC_A/1508031625256522.jpg" width="792" height="371">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="show" style="display: none;">
+                            <div class="img_slider">
+                                <div class="slider_content" style="width: 794px;">
+                                    <div class="each">
+                                        <img src="/uploads/GW_ADVERTISEMENT_PIC_A/1508031626409645.jpg" width="792" height="371">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="show" style="display: block;">
+                            <div class="img_slider">
+                                <div class="slider_content" style="width: 794px;">
+                                    <div class="each">
+                                        <img src="/uploads/GW_ADVERTISEMENT_PIC_A/1508041854192224.jpg" width="792" height="371">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="show" style="display: none;">
+                            <div class="img_slider">
+                                <div class="slider_content" style="width: 794px;">
+                                    <div class="each">
+                                        <img src="/uploads/GW_ADVERTISEMENT_PIC_A/1508041854374800.jpg" width="792" height="371">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="show" style="display: none;">
+                            <div class="img_slider">
+                                <div class="slider_content" style="width: 794px;">
+                                    <div class="each">
+                                        <img src="/uploads/GW_ADVERTISEMENT_PIC_A/1508041854536802.jpg" width="792" height="371">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                </div>
+                <div class="aboutChoose">
+
+                        <a href="javascript:brandSearch('3')" class="">开元名都</a>
+
+                        <a href="javascript:brandSearch('4')" class="">开元度假村</a>
+
+                        <a href="javascript:brandSearch('2')" class="current">开元大酒店</a>
+
+                        <a href="javascript:brandSearch('5')" class="">开元曼居</a>
+
+                        <a href="javascript:brandSearch('1')" class="noLine">开元文化主题</a>
+
+                </div>
+                <div class="list">
+                    <div id="brand_loading" style="text-align: center; display: none; margin-top: 10px; margin-bottom: 10px;">
+                    <div><span>玩命加载中...</span></div>
+                    <center>
+                        <img style="margin-top:10px;margin-bottom:10px" src="/gw/w/images/loading_h8.gif">
+                    </center>
+                </div>
+                    <div id="brand_list">
+
+
+
+
+
+    <dl class="clearfix">
+        <dt><img src="/uploads/GW_HOTEL_PIC_A/1507310926323134.jpg" width="153" height="153"></dt>
+        <dd>
+            <div class="book">
+                <span></span>
+                <a href="javascript:void(0)" onclick="hotelSearch('KYLASA')">立即预订</a>
+            </div>
+            <h3><span>开元拉萨饭店</span><img src="../../gw/images/w/star-on.png" width="16" height="16"><img src="../../gw/images/w/star-on.png" width="16" height="16"><img src="../../gw/images/w/star-on.png" width="16" height="16"><img src="../../gw/images/w/star-on.png" width="16" height="16"><img src="../../gw/images/w/star-on.png" width="16" height="16"></h3>
+            <p>
+
+                    </p><p></p><p>开元拉萨饭店位于海拔3680米的雪域圣地拉萨，是国务院1984年43项重点援藏工程项目之一，饭店庭院开阔、植被葱郁，是目前拉萨占地面积最大的唯一一家五星级园林式饭店...</p>
+
+
+            <p></p>
+            <p>地 址：拉萨市民族路1号<br>电 话：0891-6832221</p>
+        </dd>
+    </dl>
+
+    <dl class="clearfix" style="border-bottom:none;">
+        <dt><img src="/uploads/GW_HOTEL_PIC_A/1509171554488199.jpg" width="153" height="153"></dt>
+        <dd>
+            <div class="book">
+                <span></span>
+                <a href="javascript:void(0)" onclick="hotelSearch('KYTSXZ')">立即预订</a>
+            </div>
+            <h3><span>泰顺香洲开元大酒店</span><img src="../../gw/images/w/star-on.png" width="16" height="16"><img src="../../gw/images/w/star-on.png" width="16" height="16"><img src="../../gw/images/w/star-on.png" width="16" height="16"><img src="../../gw/images/w/star-on.png" width="16" height="16"></h3>
+            <p>
+
+                    </p><p></p><p>酒店共有210间/套典雅舒适的豪华客房，29间精致尊贵的中餐包厢，128个全日制西餐厅餐位，550平米的多功能宴会厅， 5个不同大小、风格各异的会议室。康体设施完善...</p>
+
+
+            <p></p>
+            <p>地 址：温州市泰顺县新城大道189号<br>电 话：0577-59288888</p>
+        </dd>
+    </dl>
+
+
+
+
+<div id="page">
+	<a href="javascript:;" class="prev" onclick="pageTo(2)">上一页</a>
+
+		<a href="javascript:;" onclick="pageTo(1)">1</a>
+
+
+		<a href="javascript:;" onclick="pageTo(2)">2</a>
+
+
+		<a href="javascript:;" onclick="pageTo(3)" class="current">3</a>
+
+
+	<a href="javascript:;" class="next" onclick="pageTo(3)">下一页</a>
+	<span style="width: auto;">共3页</span>
+	<span>到</span>
+	<input type="text" id="pageNumTo" value="">
+	<span>页</span>
+	<a href="javascript:void(0)" class="go" onclick="pageTo()">确定</a>
+</div>
+
+
+</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="footer">
+    <div class="footerBg">
+        <div class="footerMainBox">
+            <div class="footerMain clearfix">
+                <div class="each"><h3><b>关于开元</b></h3><a href="../../web/about/context.htm?param=ABOUT">开元档案</a><a href="../../web/about/context.htm?param=Directory">酒店名录</a><a href="../../web/about/context.htm?param=SALE">销售网络</a><a href="../../web/about/context.htm?param=contact">联系我们</a><a href="../../web/about/context.htm?param=statement">法律声明</a><a href="../../web/about/context.htm?param=ghds">核心承诺</a><a href="../../web/about/context.htm?param=zyjx">卓越绩效</a><a href="http://www.kaiyuancareer.com">诚聘英才</a></div><div class="each"><h3><b>媒体中心</b></h3><a href="http://kylyb.hzywyw.com/" target="_blank">集团新闻</a><a href="../../web/about/proceeding.htm">《祺》</a></div><div class="each"><h3><b>投资加盟</b></h3><a href="../../web/about/context.htm?param=cooperation">合作方式</a><a href="../../web/about/context.htm?param=standard">酒店选择标准</a><a href="../../web/about/context.htm?param=consultation">开业前管理和技术咨询</a><a href="../../web/about/context.htm?param=Project">项目管理</a><a href="../../web/about/context.htm?param=Brand">品牌优势</a><a href="../../web/about/partner.htm">合作伙伴</a></div><div class="each"><h3><b>手机应用</b></h3><a href="../../web/about/context.htm?param=testese"> 开元商祺会手机客户端</a><a href="/web/about/context.htm?param=wxky">微信开元</a><a href="/web/about/context.htm?param=zfbky">支付宝开元</a></div>
+            </div>
+        </div>
+    </div>
+    <p class="copyRight">
+        ©2013-2015开元酒店集团版权所有 浙ICP备 10000474号<br>
+        Designed  by  SHANDS
+    </p>
+    <div style="width:210px;margin:0 auto;">
+		 		<a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=33010902000286" style="display:inline-block;text-decoration:none;height:20px;line-height:20px;"><img src="http://www.beian.gov.cn/file/ghs.png" style="float:left;"><p style="float:left;height:20px;line-height:20px;margin: 0px 0px 0px 5px; color:#939393;">浙公网安备 33010902000286号</p></a>
+		 	</div>
+</div>
+
+<style>
+    /*返回顶部*/
+    #back_top{ width:40px; height:40px; position:fixed; right:5px; bottom:5px; z-index:999; display:none;}
+    #back_top a{ display:block; width:40px; height:40px; cursor:pointer; text-indent:-9999px; outline:none; background:url(/gw/w/images/back-up.png) no-repeat;background-size: 40px 40px;}
+    /*#back_top a:hover{ background-position:-32px 0;}*/
+    *html #back_top{position:absolute;cursor:pointer;right:20px; display:none;top:expression(eval(document.documentElement.scrollTop+document.documentElement.clientHeight)-260+"px")}
+</style>
+<script>
+    $(document).ready(function(){
+        $.fn.backtoTop = function(options) {
+            var defaults = {
+                showHeight : 150,
+                speed : 1000
+            };
+            var options = $.extend(defaults,options);
+            $("body").append("<div id='back_top'><a href='javascript:void(0)' class='to_top'>返回顶部</a></div>");
+            $(this).scroll(function(){
+                var scrolltop=$(this).scrollTop();
+                if(scrolltop>=options.showHeight){
+                    $("#back_top").show();
+                }
+                else{
+                    $("#back_top").hide();
+                }
+            });
+            $("#back_top a.to_top").click(function(){
+                $("html,body").animate({scrollTop: 0}, options.speed);
+            });
+        }
+        $(window).backtoTop({
+            showHeight : 50,//设置滚动高度时显示
+            speed : 500 //返回顶部的速度以毫秒为单位
+        });
+    });
+
+</script>
+<div style="display: none;">
+<script type="text/javascript">
+    var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F15515066fa52ea3346d80ce869fa3a2e' type='text/javascript'%3E%3C/script%3E"));
+</script><script src=" http://hm.baidu.com/h.js?15515066fa52ea3346d80ce869fa3a2e" type="text/javascript"></script><object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" id="HolmesIcon1465979912" width="20" height="20"><param name="movie" value="http://eiv.baidu.com/hmt/icon/11.swf"><param name="flashvars" value="s=http://tongji.baidu.com/hm-web/welcome/ico?s=15515066fa52ea3346d80ce869fa3a2e"><param name="allowscriptaccess" value="always"><embed type="application/x-shockwave-flash" name="HolmesIcon1465979912" width="20" height="20" src="http://eiv.baidu.com/hmt/icon/11.swf" flashvars="s=http://tongji.baidu.com/hm-web/welcome/ico?s=15515066fa52ea3346d80ce869fa3a2e" allowscriptaccess="always"></object>
+</div>
+
+
+
+<!--弹窗开始-->
+<div id="gray"></div>
+<div id="loginBox">
+    <div class="loginChoose">
+        <a href="javascript:void(0)" class="sBtn current">登录</a>
+        <a href="javascript:void(0)" class="sBtn">免费注册</a>
+        <a href="javascript:void(0)" class="close">关闭</a>
+    </div>
+    <h3>商祺会登录</h3>
+    <form id="loginForm" action="#" method="post">
+        <input type="hidden" value="" name="redirectUrl">
+    <div class="show" style="display:block">
+        <dl class="clearfix">
+            <dt>会员账号：</dt>
+            <dd>
+                <input type="text" value="" name="userName" placeholder="输入会员卡号或手机号码">
+            </dd>
+        </dl>
+        <dl class="clearfix">
+            <dt>密 码：</dt>
+            <dd>
+                <input type="password" value="" name="password" placeholder="输入密码">
+                <a href="/web/index/toBeforeUpdPsw.htm">忘记密码</a>
+            </dd>
+        </dl>
+
+
+        <dl class="clearfix">
+            <dt></dt>
+            <dd>
+                <a href="javascript:void(0)" style="height: 30px;line-height: 30px;margin-right:10px;float: left;" class="loginBtn" id="loginBtn_2">登录</a>
+                <a href="/web/about/aboutKaiyuan.htm?context.contextTypeEnum=PREFERENTIAL" target="_blank">了解会员权益</a>
+            </dd>
+        </dl>
+        <dl class="clearfix">
+            <dt></dt>
+            <dd style="color: #f90;font-size: 14px;">
+                <span>登录商祺会预订客房最高立减120元。</span>
+            </dd>
+        </dl>
+        <dl class="clearfix" style="border-top: 1px solid #e4e4e4; padding:25px 0 10px 0;">
+            <dt>快捷登录：</dt>
+            <dd>
+                <a href="/qqLogin/qqLogin.htm" class="qq">qq</a>
+                <a href="/alipayLogin/alipayLogin.htm" class="alipay">支付宝</a>
+            </dd>
+        </dl>
+
+    </div>
+    </form>
+    <form action="#" id="registerForm" method="post">
+    <div class="show">
+        <input type="hidden" name="imgName" id="imgName">
+        <input type="hidden" name="reCheckCode" id="reCheckCode">
+        <dl class="clearfix">
+            <dt>手机或邮箱：</dt>
+            <dd>
+                <input type="text" value="" id="mobile" name="mobile" placeholder="输入手机号码或邮箱">
+            </dd>
+        </dl>
+
+        <dl class="clearfix">
+            <dt>验证码：</dt>
+            <dd>
+
+                <input type="text" value="" id="checkCode" name="checkCode" placeholder="输入验证码" class="textIn textIn1214">
+                <a href="javascript:void(0)" onclick="sendRegisterCheckCode(this)" class="psw">获取验证码</a>
+            </dd>
+        </dl>
+
+        <dl class="clearfix">
+            <dt>姓名：</dt>
+            <dd>
+                <input type="text" placeholder="输入姓名" value="" id="nameCN" name="registerMemberInfo.nameCN">
+            </dd>
+        </dl>
+
+        <dl class="clearfix">
+            <dt>性别：</dt>
+            <dd>
+                <input style="width: auto" type="radio" name="registerMemberInfo.sex" checked="checked" value="M">男
+                <input style="width: auto" type="radio" name="registerMemberInfo.sex" value="F">女
+            </dd>
+        </dl>
+
+        <dl class="clearfix">
+            <dt>出生日期：</dt>
+            <dd>
+                <select name="year" id="year">
+                    <option></option>
+
+                        <option value="1951">1951</option>
+
+                        <option value="1952">1952</option>
+
+                        <option value="1953">1953</option>
+
+                        <option value="1954">1954</option>
+
+                        <option value="1955">1955</option>
+
+                        <option value="1956">1956</option>
+
+                        <option value="1957">1957</option>
+
+                        <option value="1958">1958</option>
+
+                        <option value="1959">1959</option>
+
+                        <option value="1960">1960</option>
+
+                        <option value="1961">1961</option>
+
+                        <option value="1962">1962</option>
+
+                        <option value="1963">1963</option>
+
+                        <option value="1964">1964</option>
+
+                        <option value="1965">1965</option>
+
+                        <option value="1966">1966</option>
+
+                        <option value="1967">1967</option>
+
+                        <option value="1968">1968</option>
+
+                        <option value="1969">1969</option>
+
+                        <option value="1970">1970</option>
+
+                        <option value="1971">1971</option>
+
+                        <option value="1972">1972</option>
+
+                        <option value="1973">1973</option>
+
+                        <option value="1974">1974</option>
+
+                        <option value="1975">1975</option>
+
+                        <option value="1976">1976</option>
+
+                        <option value="1977">1977</option>
+
+                        <option value="1978">1978</option>
+
+                        <option value="1979">1979</option>
+
+                        <option value="1980" selected="selected">1980</option>
+
+                        <option value="1981">1981</option>
+
+                        <option value="1982">1982</option>
+
+                        <option value="1983">1983</option>
+
+                        <option value="1984">1984</option>
+
+                        <option value="1985">1985</option>
+
+                        <option value="1986">1986</option>
+
+                        <option value="1987">1987</option>
+
+                        <option value="1988">1988</option>
+
+                        <option value="1989">1989</option>
+
+                        <option value="1990">1990</option>
+
+                        <option value="1991">1991</option>
+
+                        <option value="1992">1992</option>
+
+                        <option value="1993">1993</option>
+
+                        <option value="1994">1994</option>
+
+                        <option value="1995">1995</option>
+
+                        <option value="1996">1996</option>
+
+                        <option value="1997">1997</option>
+
+                        <option value="1998">1998</option>
+
+                        <option value="1999">1999</option>
+
+                        <option value="2000">2000</option>
+
+                        <option value="2001">2001</option>
+
+                        <option value="2002">2002</option>
+
+                        <option value="2003">2003</option>
+
+                        <option value="2004">2004</option>
+
+                        <option value="2005">2005</option>
+
+                        <option value="2006">2006</option>
+
+                        <option value="2007">2007</option>
+
+                        <option value="2008">2008</option>
+
+                        <option value="2009">2009</option>
+
+                        <option value="2010">2010</option>
+
+                        <option value="2011">2011</option>
+
+                        <option value="2012">2012</option>
+
+                        <option value="2013">2013</option>
+
+                        <option value="2014">2014</option>
+
+                        <option value="2015">2015</option>
+
+                        <option value="2016">2016</option>
+
+                </select>&nbsp;年
+
+                <select name="month" id="month">
+                    <option></option>
+                    <option value="1">01</option>
+                    <option value="2">02</option>
+                    <option value="3">03</option>
+                    <option value="4">04</option>
+                    <option value="5">05</option>
+                    <option value="6">06</option>
+                    <option value="7">07</option>
+                    <option value="8">08</option>
+                    <option value="9">09</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                </select>&nbsp;月
+
+                <select name="day" id="day">
+
+                </select>&nbsp;日
+            </dd>
+        </dl>
+
+        <dl class="clearfix">
+            <dt></dt>
+            <dd>
+                <a href="javascript:void(0)" style="height: 30px;line-height: 30px;margin-right:10px;float: left;" class="loginBtn" id="registerBtn_2">注册</a>
+                <a href="/web/about/aboutKaiyuan.htm?context.contextTypeEnum=PREFERENTIAL" target="_blank">了解会员权益</a>
+            </dd>
+        </dl>
+        <dl class="clearfix">
+            <dt></dt>
+            <dd>
+                <a href="/web/index/toRegisterPartner.htm" style="padding-left: 80px;">合作伙伴注册</a>
+            </dd>
+        </dl>
+    </div>
+    </form>
+</div>
+
+
+
+
+
+<div class="copyrightDetail" style="display: none;width:360px;height: 215px;margin-left:-170px;margin-top:-160px;">
+
+    <div class="posR">
+        <a href="javascript:void(0)" class="close">关闭</a>
+        <div class="detailMain clearfix" style="width:340px;height: 215px;">
+            <div style="border-bottom: 1px solid #2577e3;padding-bottom:10px;">
+                <strong>
+                    <span style="color:#64451d;">这是个机器人猖狂的年代，输入以下验证码来验明正身吧！~</span>
+                </strong>
+            </div>
+
+            <div style="text-align: center;margin-top:20px;">
+                <img id="checkCodePic" onclick="getRegisterCodeImage()" src="" width="120" height="40"><a href="#" id="checkCodeGet" style="font-size: 14px;padding-top:10px;position:relative;top:10px;left:10px;">看不清</a>
+            </div>
+            <div style="text-align: center;padding-top:10px;">
+                <div style="margin-left: -50px;">请输入验证码：<input type="text" id="webCheckCode" value=""></div>
+                <div style="margin-left: 32px;"><a href="#" class="sure">确定</a></div>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+
+<script>
+
+    $(".copyrightDetail .close").click(function(){
+        $(".copyrightDetail").hide();
+    });
+</script>
+
+<script type="text/javascript">
+    $("#loginBox .loginChoose a.sBtn").click(function(){
+        var thisIndex = $("#loginBox .loginChoose a.sBtn").index(this);
+        $("#loginBox .loginChoose a.sBtn").removeClass("current");
+        $(this).addClass("current");
+        $(this).parents("#loginBox").find(".show").hide();
+        $(this).parents("#loginBox").find(".show").eq(thisIndex).show();
+        var type = $(this).text();
+        if (type == "登录") {
+            $("#loginBox h3").text("商祺会登录");
+        } else if (type == "免费注册") {
+            $("#loginBox h3").text("免费注册");
+        }
+    });
+
+    $("#loginBox a.close").click(function(){
+        $("#gray,#loginBox").hide();
+    });
+    $("#loginBox #registerBtn_2").click(function() {
+
+        if (!isNotEmpty($("#loginBox #mobile").val())) {
+            alert("请输入手机号码或邮箱！");
+            $("#loginBox #mobile").focus();
+            return false;
+        }
+
+        if (!isNotEmpty($("#loginBox #checkCode").val())) {
+            alert("请输入验证码！");
+            $("#loginBox #checkCode").focus();
+            return false;
+        }
+
+        if (!isNotEmpty($("#loginBox #nameCN").val())) {
+            alert("请输入姓名！");
+            $("#loginBox #nameCN").focus();
+            return false;
+        }
+
+        if (!isNotEmpty($("#loginBox #year").val())) {
+            alert("请输入生日！");
+            $("#loginBox #year").focus();
+            return false;
+        }
+
+        if (!isNotEmpty($("#loginBox #month").val())) {
+            alert("请输入生日！");
+            $("#loginBox #month").focus();
+            return false;
+        }
+
+        if (!isNotEmpty($("#loginBox #day").val())) {
+            alert("请输入生日！");
+            $("#loginBox #day").focus();
+            return false;
+        }
+
+        url ="/web/index/register.htm";
+        $.ajax({
+            type: "post",
+            cache:false,
+            dataType: "text",
+            data:$("#loginBox #registerForm").serialize(),
+            url: url,
+            success: function(data){
+                var data = $.parseJSON(data);
+                if (data.statusCode == '200') {
+                    if(isNotEmpty(data.message)) {
+                        alert(data.message);
+                    }
+                    window.location.href = "/web/index/toLogin.htm";
+                } else if (data.statusCode == '300') {
+                    alert(data.message);
+                    return true;
+                } else {
+                    alert("请求出错！");
+                    return false;
+                }
+            }
+        });
+    });
+    $("#loginBox #loginBtn_2").click(function() {
+
+
+            var loginTxt = $(this).text();
+            if (loginTxt == "登录") {
+                $(this).text("登录中……");
+                loginNoRepeat("/web/index/login.htm","loginForm","/web/index.htm");
+            }
+
+
+    });
+
+    function loginNoRepeat(url,formId,forwardUrl) {
+        $.ajax({
+            type: "post",
+            cache:false,
+            dataType: "text",
+            data:$("#loginBox #"+formId).serialize(),
+            url: url,
+            success: function(data){
+                var data = $.parseJSON(data);
+                if (data.statusCode == '200') {
+                    if(isNotEmpty(data.message)) {
+                        alert(data.message);
+                    }
+                    $("#loginBox #loginBtn_2").text("登录");
+                    window.location.href= forwardUrl;
+                    return true;
+                } else if (data.statusCode == '300') {
+                    alert(data.message);
+                    $("#loginBox #loginBtn_2").text("登录");
+                    return true;
+                } else {
+                    $("#loginBox #loginBtn_2").text("登录");
+                    alert("请求出错！");
+                    return false;
+                }
+            },
+            error:function(data) {
+                alert("哎哟喂，服务器被挤爆了，请稍后再试！");
+                $("#loginBox #loginBtn_2").text("登录");
+            }
+        });
+    }
+    $("#loginBox #month").change(function() {
+        refreshDayList();
+    });
+    $("#loginBox #year").change(function() {
+        refreshDayList();
+    });
+    function refreshDayList() {
+        url = "/web/index/dayList.htm?month="+ $("#loginBox #month").val() + "&year=" + $("#loginBox #year").val();
+        $.ajax({
+            type: "post",
+            cache:false,
+            dataType: "text",
+            url: url,
+            success: function(data){
+                if(data) {
+                    $("#loginBox #day").empty();
+                    $("#loginBox #day").append(data);
+                }
+            }
+        });
+    }
+
+    var wait = 60;
+    function sendRegisterCheckCode(ojb) {
+        var senTo = $("#loginBox #mobile");
+        var sendToValue = senTo.val();
+        if (!isNotEmpty(sendToValue)) {
+            senTo.focus();
+            alert("请输入手机号码或邮箱!");
+            return false;
+        }
+        var ifTrue = false;
+        if (isPhone(sendToValue)) {
+            ifTrue = true;
+        }
+
+        if (isEmail(sendToValue)) {
+            ifTrue = true;
+        }
+
+        if (!ifTrue) {
+            senTo.focus();
+            alert("请输入正确的手机号码或邮箱!");
+            return false;
+        }
+        $(".copyrightDetail #webCheckCode").val("");
+        url = "/web/index/sendrrRegisterCheckCode.htm"
+        $.ajax({
+            type: "post",
+            cache:false,
+            dataType: "text",
+            data:$("#loginBox #registerForm").serialize(),
+            url: url,
+            success: function(data){
+                data = $.parseJSON(data);
+                if (data.statusCode == '200') {
+                    $("#loginBox input[name='checkCode']").focus();
+                    $(".copyrightDetail").css("display", "none");
+                    wait = 60;
+                    time(ojb);
+                } else if (data.statusCode == '300') {
+                    senTo.focus();
+                    alert(data.message);
+                    $(".copyrightDetail").css("display", "none");
+                    return false;
+                } else if (data.statusCode == '110') {
+                    getRegisterCodeImage();
+                    $(".copyrightDetail").css("display", "block");
+                } else {
+                    alert("请求出错！");
+                    $(".copyrightDetail").css("display", "none");
+                    return false;
+                }
+            },
+            error: function(data){
+                alert("哎哟喂，服务器被挤爆了，请稍后再试！");
+                $(".copyrightDetail").css("display", "none");
+            }
+        });
+
+    }
+    function time(ojb) {
+        if (wait == 0) {
+            $(ojb).attr("href","javascript:void(0)");
+            $(ojb).attr("onclick","sendRegisterCheckCode(this);");
+            $(ojb).text("获取验证码");
+            wait = 60;
+        } else if (wait <= 60) {
+            $(ojb).removeAttr("href");
+            $(ojb).removeAttr("onclick");
+            $(ojb).text("重新发送(" + wait + ")");
+            wait--;
+            setTimeout(function() {
+                        time(ojb);
+                    },
+                    1000)
+        } else {
+            return;
+        }
+    }
+
+    $(".copyrightDetail .sure").click(function() {
+        $("#loginBox #reCheckCode").val($(".copyrightDetail #webCheckCode").val());
+        sendRegisterCheckCode($("#loginBox .psw"));
+        $(".copyrightDetail #webCheckCode").val("");
+    });
+
+    $(".copyrightDetail #checkCodeGet").click(function() {
+        getRegisterCodeImage();
+    });
+
+    function getRegisterCodeImage() {
+        $(".copyrightDetail #checkCodePic").attr("src","/validateCode/getCodeImage?session_code_key=REGISTER_CODE_KEY&t=" + new Date().getTime());
+        $(".copyrightDetail #webCheckCode").val("");
+    }
+
+</script>
+<!--弹窗结束-->
+
+<script type="text/javascript">
+
+    $(document).ready(function(){
+        //界面初始化
+        $("#citySearch").val("杭州市");
+        var myDate = new Date();
+        var month = myDate.getMonth() + 1;
+        if (month < 10) month = "0" + month;
+        var date = myDate.getDate();
+        if (date < 10) date = "0" + date;
+        myDate = myDate.getFullYear()+"-" + month + "-"+ date;
+        $("#startTime").val(myDate);
+        myDate = plusDays(myDate, 1);
+        $("#endTime").val(myDate);
+        //获取历史搜索记录
+        var storage = window.localStorage;
+        if (storage) {
+            var historyCity1 = window.localStorage.getItem("historyCity1");
+            var historyCity2 = window.localStorage.getItem("historyCity2");
+            var historyCity3 = window.localStorage.getItem("historyCity3");
+            $(".histroy").empty();
+            if (isNotEmpty(historyCity1) && historyCity1 != "null") {
+                $(".history").append("<a href='javascript:void(0)' onclick='historyCityClick(this)'>"+ historyCity1 + "</a>");
+            }
+            if (isNotEmpty(historyCity2) && historyCity2 != "null") {
+                $(".history").append("<a href='javascript:void(0)' onclick='historyCityClick(this)'>"+ historyCity2 + "</a>");
+            }
+            if (isNotEmpty(historyCity3)  && historyCity3 != "null") {
+                $(".history").append("<a href='javascript:void(0)' onclick='historyCityClick(this)'>"+ historyCity3 + "</a>");
+            }
+        }
+        $('#startTime').datetimepicker({
+            timepicker:false,
+            format:'Y-m-d',
+            lang:'ch',
+            minDate:'1',
+            onChangeDateTime:function(){
+                calcRoomNight(true);
+            }
+        });
+        $('#endTime').datetimepicker({
+            timepicker:false,
+            format:'Y-m-d',
+            lang:'ch',
+            minDate:'0',
+            onChangeDateTime:function(){
+                calcRoomNight(false);
+            }
+        });
+        $("#citySearch").focus(function(){
+            $(this).parent(".faBox_1").find(".destination_1").show();
+        });
+        $("#citySearch").keyup(function(){
+            var thisVal = $(this).val().length;
+            if(thisVal == 0){
+                $(this).parent(".faBox_1").find(".destination_1").show();
+                $(this).parent(".faBox_1").find(".destination_2").hide();
+            }else{
+                $(this).parent(".faBox_1").find(".destination_1").hide();
+                $(this).parent(".faBox_1").find(".destination_2").show();
+                refreshDestination($(this).val());
+            }
+        });
+        $(".choose a").click(function(){
+            var thisIndex = $(".choose a").index(this);
+            $(".choose a").removeClass("current");
+            $(this).addClass("current");
+            $("#chooseCityArea div").removeClass("current");
+            $("#city"+ thisIndex).addClass("current");
+        });
+
+        $(".posBox a.close").click(function(){
+            $(this).parents(".posBox").hide();
+        });
+
+        $(".aboutChoose a").click(function(){
+            var thisIndex = $(".aboutChoose a").index(this);
+            var thisLength = $(".mainPro .show").eq(thisIndex).find(".each").length;
+            var boxWidthNew = ($(".mainPro .show").eq(thisIndex).width()) * thisLength;
+            $(".aboutChoose a").removeClass("current");
+            $(this).addClass("current");
+            $(".mainPro .show").hide();
+            $(".mainPro .show").eq(thisIndex).show();
+            $(".mainPro .show").eq(thisIndex).find(".slider_content").css("width",boxWidthNew)
+        });
+
+        $(".btn").click(function() {
+            var citySearch = $("#citySearch");
+            var startTime = $("#startTime");
+            var endTime = $("#endTime");
+            if (!isNotEmpty(citySearch.val())) {
+                alert("请输入目的地！");
+                citySearch.focus();
+                return false;
+            }
+
+            if (!isNotEmpty(startTime.val())) {
+                alert("请输入入住日期！");
+                startTime.focus();
+                return false;
+            }
+
+            if (!isNotEmpty(endTime.val())) {
+                alert("请输入离店日期！");
+                endTime.focus();
+                return false;
+            }
+            //记录历史搜索记录
+            var storage = window.localStorage;
+            if (storage) {
+                var historyCity1 = window.localStorage.getItem("historyCity1");
+                var historyCity2 = window.localStorage.getItem("historyCity2");
+                var historyCity3 = window.localStorage.getItem("historyCity3");
+                var arrHistoryCity = new Array();
+                if (isNotEmpty(historyCity1) && historyCity1 != "null") {
+                    arrHistoryCity.push(historyCity1);
+                }
+                if (isNotEmpty(historyCity2) && historyCity2 != "null") {
+                    arrHistoryCity.push(historyCity2);
+                }
+                if (isNotEmpty(historyCity3) && historyCity3 != "null") {
+                    arrHistoryCity.push(historyCity3);
+                }
+                var cityName = $("#citySearch").val();
+                if (cityName != historyCity1 && cityName != historyCity2 && cityName != historyCity3) {
+                    if(arrHistoryCity.length = 3) {
+                        window.localStorage.setItem("historyCity1",historyCity2);
+                        window.localStorage.setItem("historyCity2",historyCity3);
+                        window.localStorage.setItem("historyCity3",cityName);
+                    } else if(arrHistoryCity.length = 2){
+                        window.localStorage.setItem("historyCity3",cityName);
+                    } else if (arrHistoryCity.length = 1) {
+                        window.localStorage.setItem("historyCity2",cityName);
+                    } else {
+                        window.localStorage.setItem("historyCity1",cityName);
+                    }
+
+                }
+            } else {
+                console.log('This browser does NOT support localStorage');
+            }
+
+            var is_xyh = $("#companyCodeChk").is(":checked");
+
+            var datas = {
+                xyh:$("#companyCode").val()
+            }
+            var is_xyh = $("#companyCodeChk").is(":checked");
+            $.post("/m/check/xyh.htm",datas,function(data) {
+                if('1' == data.status && is_xyh) {
+                    toSearch();
+                }else if(is_xyh){
+                    alert("企业或推广代码有误，请核对后重新输入！");
+                    return false;
+                }else if('0' == data.status){
+//                        $("#grayBg,#loginTips").fadeIn(200);
+//                    openLoginDialog();
+//                    return false;
+                    toSearch();
+                }else {
+                    toSearch();
+                }
+            });
+
+        });
+    });
+
+    function citySearchClick(obj){
+        $("#citySearch").val($(obj).text().split('，')[0].split(',')[0]);
+        $("#keyword").val("");
+        if(!isNotEmpty($("#startTime").val())) {
+            $("#startTime").focus();
+        }
+        $(".destination_2").hide();
+        $(".destination_1").hide();
+        refreshKeyword($("#citySearch").val());
+    }
+
+    function districtBusinessZoneClick(obj) {
+        $("#keyword").val($(obj).text());
+        $(".destination_3").hide();
+    }
+
+    function historyCityClick(obj){
+        $("#citySearch").val($(obj).text());
+        $("#keyword").val("");
+        if(!isNotEmpty($("#startTime").val())) {
+            $("#startTime").focus();
+        }
+        $(".destination_2").hide();
+        $(".destination_1").hide();
+        refreshKeyword($("#citySearch").val());
+    }
+
+    function refreshKeyword(destination) {
+        url = "/web/index/findKeywordByDestination.htm";
+        //获取关键字
+        $.ajax({
+            type: "post",
+            cache:false,
+            dataType: "text",
+            data:{'destination':destination},
+            url: url,
+            success: function(data){
+                if(data) {
+                    $("#keywordArea").empty();
+                    $("#keywordArea").append(data);
+                }
+            }
+        });
+    }
+
+    function refreshDestination(destination) {
+        $(".destination_2 h4").empty();
+        $(".destination_2 ul").empty();
+        url = "/web/index/findDestinationByDestination.htm";
+        //获取目的地
+        $.ajax({
+            type: "post",
+            cache:false,
+            dataType: "text",
+            data:{'destination':destination},
+            url: url,
+            success: function(data){
+                if(data) {
+                    $(".destination_2 ul").empty();
+                    $(".destination_2 ul").append(data);
+                }
+
+            }
+        });
+        $(".destination_2 h4").html("<a href='javascript:close()' class='close'>×</a>" + destination + "，若需缩小范围，请输入更多条件。");
+
+    }
+
+    function toSearch() {
+        window.location.href = "/web/hotel/searchHotelList.htm?hotelUtil.city.name="+ encodeURI(encodeURI($("#citySearch").val())) + "&hotelUtil.arrDate=" + $("#startTime").val() + "&hotelUtil.depDate=" + $("#endTime").val() + "&hotelUtil.keyword=" + encodeURI(encodeURI($("#keyword").val()));
+    }
+
+    //计算间夜
+    function calcRoomNight(flg) {
+        var arrDate = $("#startTime").val();
+        var depDate = $("#endTime").val();
+        var start = new Date(arrDate.replace(/-/g, "/"));
+        var end = new Date(depDate.replace(/-/g, "/"));
+        if (end <= start || !isNotEmpty(depDate) || !isNotEmpty(arrDate)) {
+            if (flg) {
+                depDate = plusDays(arrDate, 1);
+                $("#endTime").val(depDate);
+            } else {
+                arrDate = plusDays(depDate, -1);
+                $("#startTime").val(arrDate);
+            }
+        }
+
+        var days = dateDiff($("#startTime").val(), $("#endTime").val());
+        if (days > 14) {
+            if (flg) {
+                depDate = plusDays($("#startTime").val(), 14);
+                $("#endTime").val(depDate);
+            } else {
+                depDate = plusDays($("#endTime").val(), -14);
+                $("#startTime").val(depDate);
+            }
+        }
+    }
+
+    function historyCityClick(obj){
+        $("#citySearch").val($(obj).text());
+        $("#keyword").val("");
+        if(!isNotEmpty($("#startTime").val())) {
+            $("#startTime").focus();
+        }
+        $(".destination_2").hide();
+        $(".destination_1").hide();
+//        refreshKeyword($("#citySearch").val());
+    }
+
+    function pageTo(pageNum) {
+        if (!isNotEmpty(pageNum)) {
+            pageNum = $("#pageNumTo").val();
+        }
+        $("#pageNo").val(pageNum);
+//        $("#form").submit();
+
+        console.log($("#form #brandId").val());
+        console.log($("#form #pageNo").val());
+        console.log($("#form #pageSize").val());
+        $(".about802 .list #brand_list").empty();
+        $(".about802 .list #brand_loading").css("display", "block");
+        $.ajax({
+            url: '/web/hotel/brand2.htm',
+            data: $("#form").serialize(),
+            //data: {'hotelUtil.brand.id': $("#brandId").val(),'pageNo': $("#pageNo").val(),'pageSize': $("#pageSize").val()},
+            cache:false,
+            success: function (datas) {
+                $(".about802 .list #brand_loading").css("display", "none");
+                $(".about802 .list #brand_list").append(datas);
+            },
+            error:function(datas){
+                $(".about802 .list #brand_loading").css("display", "none");
+                $(".about802 .list #brand_list").append("<div style='text-align: center;margin-top:20px;margin-bottom:20px;'><span>哎哟喂，被挤爆了，请稍后再试！</span></div>");
+            }
+        });
+    }
+
+    function hotelSearch(code) {
+        window.location.href = "/web/rate/index.htm?hotelCode="+ code+"&arrDateStr="+ $("#startTime").val()+"&depDateStr=" +$("#endTime").val();
+    }
+
+    function brandSearch(brandType) {
+
+        $("#form #brandId").val(brandType);
+
+        $(".about802 .list #brand_list").empty();
+        $(".about802 .list #brand_loading").css("display", "block");
+        $.ajax({
+            url: '/web/hotel/brand2.htm',
+            data: {'hotelUtil.brand.id': brandType},
+            cache:false,
+            success: function (datas) {
+                $(".about802 .list #brand_loading").css("display", "none");
+                $(".about802 .list #brand_list").append(datas);
+            },
+            error:function(datas){
+                $(".about802 .list #brand_loading").css("display", "none");
+                $(".about802 .list #brand_list").append("<div style='text-align: center;margin-top:20px;margin-bottom:20px;'><span>哎哟喂，被挤爆了，请稍后再试！</span></div>");
+            }
+        });
+    }
+
+</script>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $(".img_slider a.next").css("opacity","0.5");
+        $(".img_slider a.prev").css("opacity","0.5");
+
+        //遍历各个节点计算当前节点宽度并赋值与节点
+        $(".img_slider .slider_content").each(function(){
+            var imgLength = $(this).find(".each").length;
+            var boxWidth = ($(this).find(".each").width()) * imgLength;
+            $(this).css("width",boxWidth);
+        });
+
+        //点击向右翻转，仅限当前节点访问
+        $("a.next").click(function(){
+            var $thisParent = $(this).parent(".img_slider").find(".slider_content");
+            $thisParent.animate({left:$thisParent.find(".each").width()*-1},600,function(){
+                $thisParent.css("left","0");
+                $thisParent.find(".each:first").appendTo($thisParent);
+            });
+        });
+
+        //点击向左翻转，仅限当前节点访问
+        $("a.prev").click(function(){
+            var $thisParent = $(this).parent(".img_slider").find(".slider_content");
+            $thisParent.css("left",$thisParent.find(".each").width()*-1);
+            $thisParent.find(".each:last").prependTo($thisParent);
+            $thisParent.animate({left:"0"}, 600);
+        });
+    });
+</script>
+
+
+<div id="back_top" style="display: block;"><a href="javascript:void(0)" class="to_top">返回顶部</a></div><div class="xdsoft_datetimepicker xdsoft_noselect "><div class="xdsoft_datepicker active"><div class="xdsoft_mounthpicker"><button type="button" class="xdsoft_prev"></button><button type="button" class="xdsoft_today_button" style="visibility: visible;"></button><div class="xdsoft_label xdsoft_month"><span>六月</span><div class="xdsoft_select xdsoft_monthselect xdsoft_scroller_box"><div style="margin-top: 0px;"><div class="xdsoft_option " data-value="0">一月</div><div class="xdsoft_option " data-value="1">二月</div><div class="xdsoft_option " data-value="2">三月</div><div class="xdsoft_option " data-value="3">四月</div><div class="xdsoft_option " data-value="4">五月</div><div class="xdsoft_option xdsoft_current" data-value="5">六月</div><div class="xdsoft_option " data-value="6">七月</div><div class="xdsoft_option " data-value="7">八月</div><div class="xdsoft_option " data-value="8">九月</div><div class="xdsoft_option " data-value="9">十月</div><div class="xdsoft_option " data-value="10">十一月</div><div class="xdsoft_option " data-value="11">十二月</div></div><div class="xdsoft_scrollbar"><div class="xdsoft_scroller" style="display: block; height: 10px; margin-top: 0px;"></div></div></div></div><div class="xdsoft_label xdsoft_year"><span>2016</span><div class="xdsoft_select xdsoft_yearselect xdsoft_scroller_box"><div style="margin-top: 0px;"><div class="xdsoft_option " data-value="1950">1950</div><div class="xdsoft_option " data-value="1951">1951</div><div class="xdsoft_option " data-value="1952">1952</div><div class="xdsoft_option " data-value="1953">1953</div><div class="xdsoft_option " data-value="1954">1954</div><div class="xdsoft_option " data-value="1955">1955</div><div class="xdsoft_option " data-value="1956">1956</div><div class="xdsoft_option " data-value="1957">1957</div><div class="xdsoft_option " data-value="1958">1958</div><div class="xdsoft_option " data-value="1959">1959</div><div class="xdsoft_option " data-value="1960">1960</div><div class="xdsoft_option " data-value="1961">1961</div><div class="xdsoft_option " data-value="1962">1962</div><div class="xdsoft_option " data-value="1963">1963</div><div class="xdsoft_option " data-value="1964">1964</div><div class="xdsoft_option " data-value="1965">1965</div><div class="xdsoft_option " data-value="1966">1966</div><div class="xdsoft_option " data-value="1967">1967</div><div class="xdsoft_option " data-value="1968">1968</div><div class="xdsoft_option " data-value="1969">1969</div><div class="xdsoft_option " data-value="1970">1970</div><div class="xdsoft_option " data-value="1971">1971</div><div class="xdsoft_option " data-value="1972">1972</div><div class="xdsoft_option " data-value="1973">1973</div><div class="xdsoft_option " data-value="1974">1974</div><div class="xdsoft_option " data-value="1975">1975</div><div class="xdsoft_option " data-value="1976">1976</div><div class="xdsoft_option " data-value="1977">1977</div><div class="xdsoft_option " data-value="1978">1978</div><div class="xdsoft_option " data-value="1979">1979</div><div class="xdsoft_option " data-value="1980">1980</div><div class="xdsoft_option " data-value="1981">1981</div><div class="xdsoft_option " data-value="1982">1982</div><div class="xdsoft_option " data-value="1983">1983</div><div class="xdsoft_option " data-value="1984">1984</div><div class="xdsoft_option " data-value="1985">1985</div><div class="xdsoft_option " data-value="1986">1986</div><div class="xdsoft_option " data-value="1987">1987</div><div class="xdsoft_option " data-value="1988">1988</div><div class="xdsoft_option " data-value="1989">1989</div><div class="xdsoft_option " data-value="1990">1990</div><div class="xdsoft_option " data-value="1991">1991</div><div class="xdsoft_option " data-value="1992">1992</div><div class="xdsoft_option " data-value="1993">1993</div><div class="xdsoft_option " data-value="1994">1994</div><div class="xdsoft_option " data-value="1995">1995</div><div class="xdsoft_option " data-value="1996">1996</div><div class="xdsoft_option " data-value="1997">1997</div><div class="xdsoft_option " data-value="1998">1998</div><div class="xdsoft_option " data-value="1999">1999</div><div class="xdsoft_option " data-value="2000">2000</div><div class="xdsoft_option " data-value="2001">2001</div><div class="xdsoft_option " data-value="2002">2002</div><div class="xdsoft_option " data-value="2003">2003</div><div class="xdsoft_option " data-value="2004">2004</div><div class="xdsoft_option " data-value="2005">2005</div><div class="xdsoft_option " data-value="2006">2006</div><div class="xdsoft_option " data-value="2007">2007</div><div class="xdsoft_option " data-value="2008">2008</div><div class="xdsoft_option " data-value="2009">2009</div><div class="xdsoft_option " data-value="2010">2010</div><div class="xdsoft_option " data-value="2011">2011</div><div class="xdsoft_option " data-value="2012">2012</div><div class="xdsoft_option " data-value="2013">2013</div><div class="xdsoft_option " data-value="2014">2014</div><div class="xdsoft_option " data-value="2015">2015</div><div class="xdsoft_option xdsoft_current" data-value="2016">2016</div><div class="xdsoft_option " data-value="2017">2017</div><div class="xdsoft_option " data-value="2018">2018</div><div class="xdsoft_option " data-value="2019">2019</div><div class="xdsoft_option " data-value="2020">2020</div><div class="xdsoft_option " data-value="2021">2021</div><div class="xdsoft_option " data-value="2022">2022</div><div class="xdsoft_option " data-value="2023">2023</div><div class="xdsoft_option " data-value="2024">2024</div><div class="xdsoft_option " data-value="2025">2025</div><div class="xdsoft_option " data-value="2026">2026</div><div class="xdsoft_option " data-value="2027">2027</div><div class="xdsoft_option " data-value="2028">2028</div><div class="xdsoft_option " data-value="2029">2029</div><div class="xdsoft_option " data-value="2030">2030</div><div class="xdsoft_option " data-value="2031">2031</div><div class="xdsoft_option " data-value="2032">2032</div><div class="xdsoft_option " data-value="2033">2033</div><div class="xdsoft_option " data-value="2034">2034</div><div class="xdsoft_option " data-value="2035">2035</div><div class="xdsoft_option " data-value="2036">2036</div><div class="xdsoft_option " data-value="2037">2037</div><div class="xdsoft_option " data-value="2038">2038</div><div class="xdsoft_option " data-value="2039">2039</div><div class="xdsoft_option " data-value="2040">2040</div><div class="xdsoft_option " data-value="2041">2041</div><div class="xdsoft_option " data-value="2042">2042</div><div class="xdsoft_option " data-value="2043">2043</div><div class="xdsoft_option " data-value="2044">2044</div><div class="xdsoft_option " data-value="2045">2045</div><div class="xdsoft_option " data-value="2046">2046</div><div class="xdsoft_option " data-value="2047">2047</div><div class="xdsoft_option " data-value="2048">2048</div><div class="xdsoft_option " data-value="2049">2049</div><div class="xdsoft_option " data-value="2050">2050</div></div><div class="xdsoft_scrollbar"><div class="xdsoft_scroller" style="display: block; height: 10px; margin-top: 0px;"></div></div></div></div><button type="button" class="xdsoft_next"></button></div><div class="xdsoft_calendar"><table><thead><tr><th>日</th><th>一</th><th>二</th><th>三</th><th>四</th><th>五</th><th>六</th></tr></thead><tbody><tr><td data-date="29" data-month="4" data-year="2016" class="xdsoft_date xdsoft_day_of_week0 xdsoft_date xdsoft_disabled xdsoft_other_month xdsoft_weekend"><div>29</div></td><td data-date="30" data-month="4" data-year="2016" class="xdsoft_date xdsoft_day_of_week1 xdsoft_date xdsoft_disabled xdsoft_other_month"><div>30</div></td><td data-date="31" data-month="4" data-year="2016" class="xdsoft_date xdsoft_day_of_week2 xdsoft_date xdsoft_disabled xdsoft_other_month"><div>31</div></td><td data-date="1" data-month="5" data-year="2016" class="xdsoft_date xdsoft_day_of_week3 xdsoft_date xdsoft_disabled"><div>1</div></td><td data-date="2" data-month="5" data-year="2016" class="xdsoft_date xdsoft_day_of_week4 xdsoft_date xdsoft_disabled"><div>2</div></td><td data-date="3" data-month="5" data-year="2016" class="xdsoft_date xdsoft_day_of_week5 xdsoft_date xdsoft_disabled"><div>3</div></td><td data-date="4" data-month="5" data-year="2016" class="xdsoft_date xdsoft_day_of_week6 xdsoft_date xdsoft_disabled xdsoft_weekend"><div>4</div></td></tr><tr><td data-date="5" data-month="5" data-year="2016" class="xdsoft_date xdsoft_day_of_week0 xdsoft_date xdsoft_disabled xdsoft_weekend"><div>5</div></td><td data-date="6" data-month="5" data-year="2016" class="xdsoft_date xdsoft_day_of_week1 xdsoft_date xdsoft_disabled"><div>6</div></td><td data-date="7" data-month="5" data-year="2016" class="xdsoft_date xdsoft_day_of_week2 xdsoft_date xdsoft_disabled"><div>7</div></td><td data-date="8" data-month="5" data-year="2016" class="xdsoft_date xdsoft_day_of_week3 xdsoft_date xdsoft_disabled"><div>8</div></td><td data-date="9" data-month="5" data-year="2016" class="xdsoft_date xdsoft_day_of_week4 xdsoft_date xdsoft_disabled"><div>9</div></td><td data-date="10" data-month="5" data-year="2016" class="xdsoft_date xdsoft_day_of_week5 xdsoft_date xdsoft_disabled"><div>10</div></td><td data-date="11" data-month="5" data-year="2016" class="xdsoft_date xdsoft_day_of_week6 xdsoft_date xdsoft_disabled xdsoft_weekend"><div>11</div></td></tr><tr><td data-date="12" data-month="5" data-year="2016" class="xdsoft_date xdsoft_day_of_week0 xdsoft_date xdsoft_disabled xdsoft_weekend"><div>12</div></td><td data-date="13" data-month="5" data-year="2016" class="xdsoft_date xdsoft_day_of_week1 xdsoft_date xdsoft_disabled"><div>13</div></td><td data-date="14" data-month="5" data-year="2016" class="xdsoft_date xdsoft_day_of_week2 xdsoft_date xdsoft_disabled"><div>14</div></td><td data-date="15" data-month="5" data-year="2016" class="xdsoft_date xdsoft_day_of_week3 xdsoft_date xdsoft_current xdsoft_today"><div>15</div></td><td data-date="16" data-month="5" data-year="2016" class="xdsoft_date xdsoft_day_of_week4 xdsoft_date"><div>16</div></td><td data-date="17" data-month="5" data-year="2016" class="xdsoft_date xdsoft_day_of_week5 xdsoft_date"><div>17</div></td><td data-date="18" data-month="5" data-year="2016" class="xdsoft_date xdsoft_day_of_week6 xdsoft_date xdsoft_weekend"><div>18</div></td></tr><tr><td data-date="19" data-month="5" data-year="2016" class="xdsoft_date xdsoft_day_of_week0 xdsoft_date xdsoft_weekend"><div>19</div></td><td data-date="20" data-month="5" data-year="2016" class="xdsoft_date xdsoft_day_of_week1 xdsoft_date"><div>20</div></td><td data-date="21" data-month="5" data-year="2016" class="xdsoft_date xdsoft_day_of_week2 xdsoft_date"><div>21</div></td><td data-date="22" data-month="5" data-year="2016" class="xdsoft_date xdsoft_day_of_week3 xdsoft_date"><div>22</div></td><td data-date="23" data-month="5" data-year="2016" class="xdsoft_date xdsoft_day_of_week4 xdsoft_date"><div>23</div></td><td data-date="24" data-month="5" data-year="2016" class="xdsoft_date xdsoft_day_of_week5 xdsoft_date"><div>24</div></td><td data-date="25" data-month="5" data-year="2016" class="xdsoft_date xdsoft_day_of_week6 xdsoft_date xdsoft_weekend"><div>25</div></td></tr><tr><td data-date="26" data-month="5" data-year="2016" class="xdsoft_date xdsoft_day_of_week0 xdsoft_date xdsoft_weekend"><div>26</div></td><td data-date="27" data-month="5" data-year="2016" class="xdsoft_date xdsoft_day_of_week1 xdsoft_date"><div>27</div></td><td data-date="28" data-month="5" data-year="2016" class="xdsoft_date xdsoft_day_of_week2 xdsoft_date"><div>28</div></td><td data-date="29" data-month="5" data-year="2016" class="xdsoft_date xdsoft_day_of_week3 xdsoft_date"><div>29</div></td><td data-date="30" data-month="5" data-year="2016" class="xdsoft_date xdsoft_day_of_week4 xdsoft_date"><div>30</div></td><td data-date="1" data-month="6" data-year="2016" class="xdsoft_date xdsoft_day_of_week5 xdsoft_date xdsoft_other_month"><div>1</div></td><td data-date="2" data-month="6" data-year="2016" class="xdsoft_date xdsoft_day_of_week6 xdsoft_date xdsoft_other_month xdsoft_weekend"><div>2</div></td></tr></tbody></table></div></div><div class="xdsoft_timepicker"><button type="button" class="xdsoft_prev"></button><div class="xdsoft_time_box xdsoft_scroller_box"><div class="xdsoft_time_variant" style="margin-top: 0px;"><div class="xdsoft_time xdsoft_current" data-hour="0" data-minute="0">00:00</div><div class="xdsoft_time " data-hour="1" data-minute="0">01:00</div><div class="xdsoft_time " data-hour="2" data-minute="0">02:00</div><div class="xdsoft_time " data-hour="3" data-minute="0">03:00</div><div class="xdsoft_time " data-hour="4" data-minute="0">04:00</div><div class="xdsoft_time " data-hour="5" data-minute="0">05:00</div><div class="xdsoft_time " data-hour="6" data-minute="0">06:00</div><div class="xdsoft_time " data-hour="7" data-minute="0">07:00</div><div class="xdsoft_time " data-hour="8" data-minute="0">08:00</div><div class="xdsoft_time " data-hour="9" data-minute="0">09:00</div><div class="xdsoft_time " data-hour="10" data-minute="0">10:00</div><div class="xdsoft_time " data-hour="11" data-minute="0">11:00</div><div class="xdsoft_time " data-hour="12" data-minute="0">12:00</div><div class="xdsoft_time " data-hour="13" data-minute="0">13:00</div><div class="xdsoft_time " data-hour="14" data-minute="0">14:00</div><div class="xdsoft_time " data-hour="15" data-minute="0">15:00</div><div class="xdsoft_time " data-hour="16" data-minute="0">16:00</div><div class="xdsoft_time " data-hour="17" data-minute="0">17:00</div><div class="xdsoft_time " data-hour="18" data-minute="0">18:00</div><div class="xdsoft_time " data-hour="19" data-minute="0">19:00</div><div class="xdsoft_time " data-hour="20" data-minute="0">20:00</div><div class="xdsoft_time " data-hour="21" data-minute="0">21:00</div><div class="xdsoft_time " data-hour="22" data-minute="0">22:00</div><div class="xdsoft_time " data-hour="23" data-minute="0">23:00</div></div><div class="xdsoft_scrollbar"><div class="xdsoft_scroller" style="display: block; height: 10px; margin-top: 0px;"></div></div></div><button type="button" class="xdsoft_next"></button></div></div><div class="xdsoft_datetimepicker xdsoft_noselect "><div class="xdsoft_datepicker active"><div class="xdsoft_mounthpicker"><button type="button" class="xdsoft_prev"></button><button type="button" class="xdsoft_today_button" style="visibility: visible;"></button><div class="xdsoft_label xdsoft_month"><span>六月</span><div class="xdsoft_select xdsoft_monthselect xdsoft_scroller_box"><div style="margin-top: 0px;"><div class="xdsoft_option " data-value="0">一月</div><div class="xdsoft_option " data-value="1">二月</div><div class="xdsoft_option " data-value="2">三月</div><div class="xdsoft_option " data-value="3">四月</div><div class="xdsoft_option " data-value="4">五月</div><div class="xdsoft_option xdsoft_current" data-value="5">六月</div><div class="xdsoft_option " data-value="6">七月</div><div class="xdsoft_option " data-value="7">八月</div><div class="xdsoft_option " data-value="8">九月</div><div class="xdsoft_option " data-value="9">十月</div><div class="xdsoft_option " data-value="10">十一月</div><div class="xdsoft_option " data-value="11">十二月</div></div><div class="xdsoft_scrollbar"><div class="xdsoft_scroller" style="display: block; height: 10px; margin-top: 0px;"></div></div></div></div><div class="xdsoft_label xdsoft_year"><span>2016</span><div class="xdsoft_select xdsoft_yearselect xdsoft_scroller_box"><div style="margin-top: 0px;"><div class="xdsoft_option " data-value="1950">1950</div><div class="xdsoft_option " data-value="1951">1951</div><div class="xdsoft_option " data-value="1952">1952</div><div class="xdsoft_option " data-value="1953">1953</div><div class="xdsoft_option " data-value="1954">1954</div><div class="xdsoft_option " data-value="1955">1955</div><div class="xdsoft_option " data-value="1956">1956</div><div class="xdsoft_option " data-value="1957">1957</div><div class="xdsoft_option " data-value="1958">1958</div><div class="xdsoft_option " data-value="1959">1959</div><div class="xdsoft_option " data-value="1960">1960</div><div class="xdsoft_option " data-value="1961">1961</div><div class="xdsoft_option " data-value="1962">1962</div><div class="xdsoft_option " data-value="1963">1963</div><div class="xdsoft_option " data-value="1964">1964</div><div class="xdsoft_option " data-value="1965">1965</div><div class="xdsoft_option " data-value="1966">1966</div><div class="xdsoft_option " data-value="1967">1967</div><div class="xdsoft_option " data-value="1968">1968</div><div class="xdsoft_option " data-value="1969">1969</div><div class="xdsoft_option " data-value="1970">1970</div><div class="xdsoft_option " data-value="1971">1971</div><div class="xdsoft_option " data-value="1972">1972</div><div class="xdsoft_option " data-value="1973">1973</div><div class="xdsoft_option " data-value="1974">1974</div><div class="xdsoft_option " data-value="1975">1975</div><div class="xdsoft_option " data-value="1976">1976</div><div class="xdsoft_option " data-value="1977">1977</div><div class="xdsoft_option " data-value="1978">1978</div><div class="xdsoft_option " data-value="1979">1979</div><div class="xdsoft_option " data-value="1980">1980</div><div class="xdsoft_option " data-value="1981">1981</div><div class="xdsoft_option " data-value="1982">1982</div><div class="xdsoft_option " data-value="1983">1983</div><div class="xdsoft_option " data-value="1984">1984</div><div class="xdsoft_option " data-value="1985">1985</div><div class="xdsoft_option " data-value="1986">1986</div><div class="xdsoft_option " data-value="1987">1987</div><div class="xdsoft_option " data-value="1988">1988</div><div class="xdsoft_option " data-value="1989">1989</div><div class="xdsoft_option " data-value="1990">1990</div><div class="xdsoft_option " data-value="1991">1991</div><div class="xdsoft_option " data-value="1992">1992</div><div class="xdsoft_option " data-value="1993">1993</div><div class="xdsoft_option " data-value="1994">1994</div><div class="xdsoft_option " data-value="1995">1995</div><div class="xdsoft_option " data-value="1996">1996</div><div class="xdsoft_option " data-value="1997">1997</div><div class="xdsoft_option " data-value="1998">1998</div><div class="xdsoft_option " data-value="1999">1999</div><div class="xdsoft_option " data-value="2000">2000</div><div class="xdsoft_option " data-value="2001">2001</div><div class="xdsoft_option " data-value="2002">2002</div><div class="xdsoft_option " data-value="2003">2003</div><div class="xdsoft_option " data-value="2004">2004</div><div class="xdsoft_option " data-value="2005">2005</div><div class="xdsoft_option " data-value="2006">2006</div><div class="xdsoft_option " data-value="2007">2007</div><div class="xdsoft_option " data-value="2008">2008</div><div class="xdsoft_option " data-value="2009">2009</div><div class="xdsoft_option " data-value="2010">2010</div><div class="xdsoft_option " data-value="2011">2011</div><div class="xdsoft_option " data-value="2012">2012</div><div class="xdsoft_option " data-value="2013">2013</div><div class="xdsoft_option " data-value="2014">2014</div><div class="xdsoft_option " data-value="2015">2015</div><div class="xdsoft_option xdsoft_current" data-value="2016">2016</div><div class="xdsoft_option " data-value="2017">2017</div><div class="xdsoft_option " data-value="2018">2018</div><div class="xdsoft_option " data-value="2019">2019</div><div class="xdsoft_option " data-value="2020">2020</div><div class="xdsoft_option " data-value="2021">2021</div><div class="xdsoft_option " data-value="2022">2022</div><div class="xdsoft_option " data-value="2023">2023</div><div class="xdsoft_option " data-value="2024">2024</div><div class="xdsoft_option " data-value="2025">2025</div><div class="xdsoft_option " data-value="2026">2026</div><div class="xdsoft_option " data-value="2027">2027</div><div class="xdsoft_option " data-value="2028">2028</div><div class="xdsoft_option " data-value="2029">2029</div><div class="xdsoft_option " data-value="2030">2030</div><div class="xdsoft_option " data-value="2031">2031</div><div class="xdsoft_option " data-value="2032">2032</div><div class="xdsoft_option " data-value="2033">2033</div><div class="xdsoft_option " data-value="2034">2034</div><div class="xdsoft_option " data-value="2035">2035</div><div class="xdsoft_option " data-value="2036">2036</div><div class="xdsoft_option " data-value="2037">2037</div><div class="xdsoft_option " data-value="2038">2038</div><div class="xdsoft_option " data-value="2039">2039</div><div class="xdsoft_option " data-value="2040">2040</div><div class="xdsoft_option " data-value="2041">2041</div><div class="xdsoft_option " data-value="2042">2042</div><div class="xdsoft_option " data-value="2043">2043</div><div class="xdsoft_option " data-value="2044">2044</div><div class="xdsoft_option " data-value="2045">2045</div><div class="xdsoft_option " data-value="2046">2046</div><div class="xdsoft_option " data-value="2047">2047</div><div class="xdsoft_option " data-value="2048">2048</div><div class="xdsoft_option " data-value="2049">2049</div><div class="xdsoft_option " data-value="2050">2050</div></div><div class="xdsoft_scrollbar"><div class="xdsoft_scroller" style="display: block; height: 10px; margin-top: 0px;"></div></div></div></div><button type="button" class="xdsoft_next"></button></div><div class="xdsoft_calendar"><table><thead><tr><th>日</th><th>一</th><th>二</th><th>三</th><th>四</th><th>五</th><th>六</th></tr></thead><tbody><tr><td data-date="29" data-month="4" data-year="2016" class="xdsoft_date xdsoft_day_of_week0 xdsoft_date xdsoft_disabled xdsoft_other_month xdsoft_weekend"><div>29</div></td><td data-date="30" data-month="4" data-year="2016" class="xdsoft_date xdsoft_day_of_week1 xdsoft_date xdsoft_disabled xdsoft_other_month"><div>30</div></td><td data-date="31" data-month="4" data-year="2016" class="xdsoft_date xdsoft_day_of_week2 xdsoft_date xdsoft_disabled xdsoft_other_month"><div>31</div></td><td data-date="1" data-month="5" data-year="2016" class="xdsoft_date xdsoft_day_of_week3 xdsoft_date xdsoft_disabled"><div>1</div></td><td data-date="2" data-month="5" data-year="2016" class="xdsoft_date xdsoft_day_of_week4 xdsoft_date xdsoft_disabled"><div>2</div></td><td data-date="3" data-month="5" data-year="2016" class="xdsoft_date xdsoft_day_of_week5 xdsoft_date xdsoft_disabled"><div>3</div></td><td data-date="4" data-month="5" data-year="2016" class="xdsoft_date xdsoft_day_of_week6 xdsoft_date xdsoft_disabled xdsoft_weekend"><div>4</div></td></tr><tr><td data-date="5" data-month="5" data-year="2016" class="xdsoft_date xdsoft_day_of_week0 xdsoft_date xdsoft_disabled xdsoft_weekend"><div>5</div></td><td data-date="6" data-month="5" data-year="2016" class="xdsoft_date xdsoft_day_of_week1 xdsoft_date xdsoft_disabled"><div>6</div></td><td data-date="7" data-month="5" data-year="2016" class="xdsoft_date xdsoft_day_of_week2 xdsoft_date xdsoft_disabled"><div>7</div></td><td data-date="8" data-month="5" data-year="2016" class="xdsoft_date xdsoft_day_of_week3 xdsoft_date xdsoft_disabled"><div>8</div></td><td data-date="9" data-month="5" data-year="2016" class="xdsoft_date xdsoft_day_of_week4 xdsoft_date xdsoft_disabled"><div>9</div></td><td data-date="10" data-month="5" data-year="2016" class="xdsoft_date xdsoft_day_of_week5 xdsoft_date xdsoft_disabled"><div>10</div></td><td data-date="11" data-month="5" data-year="2016" class="xdsoft_date xdsoft_day_of_week6 xdsoft_date xdsoft_disabled xdsoft_weekend"><div>11</div></td></tr><tr><td data-date="12" data-month="5" data-year="2016" class="xdsoft_date xdsoft_day_of_week0 xdsoft_date xdsoft_disabled xdsoft_weekend"><div>12</div></td><td data-date="13" data-month="5" data-year="2016" class="xdsoft_date xdsoft_day_of_week1 xdsoft_date xdsoft_disabled"><div>13</div></td><td data-date="14" data-month="5" data-year="2016" class="xdsoft_date xdsoft_day_of_week2 xdsoft_date xdsoft_disabled"><div>14</div></td><td data-date="15" data-month="5" data-year="2016" class="xdsoft_date xdsoft_day_of_week3 xdsoft_date xdsoft_today"><div>15</div></td><td data-date="16" data-month="5" data-year="2016" class="xdsoft_date xdsoft_day_of_week4 xdsoft_date xdsoft_current"><div>16</div></td><td data-date="17" data-month="5" data-year="2016" class="xdsoft_date xdsoft_day_of_week5 xdsoft_date"><div>17</div></td><td data-date="18" data-month="5" data-year="2016" class="xdsoft_date xdsoft_day_of_week6 xdsoft_date xdsoft_weekend"><div>18</div></td></tr><tr><td data-date="19" data-month="5" data-year="2016" class="xdsoft_date xdsoft_day_of_week0 xdsoft_date xdsoft_weekend"><div>19</div></td><td data-date="20" data-month="5" data-year="2016" class="xdsoft_date xdsoft_day_of_week1 xdsoft_date"><div>20</div></td><td data-date="21" data-month="5" data-year="2016" class="xdsoft_date xdsoft_day_of_week2 xdsoft_date"><div>21</div></td><td data-date="22" data-month="5" data-year="2016" class="xdsoft_date xdsoft_day_of_week3 xdsoft_date"><div>22</div></td><td data-date="23" data-month="5" data-year="2016" class="xdsoft_date xdsoft_day_of_week4 xdsoft_date"><div>23</div></td><td data-date="24" data-month="5" data-year="2016" class="xdsoft_date xdsoft_day_of_week5 xdsoft_date"><div>24</div></td><td data-date="25" data-month="5" data-year="2016" class="xdsoft_date xdsoft_day_of_week6 xdsoft_date xdsoft_weekend"><div>25</div></td></tr><tr><td data-date="26" data-month="5" data-year="2016" class="xdsoft_date xdsoft_day_of_week0 xdsoft_date xdsoft_weekend"><div>26</div></td><td data-date="27" data-month="5" data-year="2016" class="xdsoft_date xdsoft_day_of_week1 xdsoft_date"><div>27</div></td><td data-date="28" data-month="5" data-year="2016" class="xdsoft_date xdsoft_day_of_week2 xdsoft_date"><div>28</div></td><td data-date="29" data-month="5" data-year="2016" class="xdsoft_date xdsoft_day_of_week3 xdsoft_date"><div>29</div></td><td data-date="30" data-month="5" data-year="2016" class="xdsoft_date xdsoft_day_of_week4 xdsoft_date"><div>30</div></td><td data-date="1" data-month="6" data-year="2016" class="xdsoft_date xdsoft_day_of_week5 xdsoft_date xdsoft_other_month"><div>1</div></td><td data-date="2" data-month="6" data-year="2016" class="xdsoft_date xdsoft_day_of_week6 xdsoft_date xdsoft_other_month xdsoft_weekend"><div>2</div></td></tr></tbody></table></div></div><div class="xdsoft_timepicker"><button type="button" class="xdsoft_prev"></button><div class="xdsoft_time_box xdsoft_scroller_box"><div class="xdsoft_time_variant" style="margin-top: 0px;"><div class="xdsoft_time xdsoft_current" data-hour="0" data-minute="0">00:00</div><div class="xdsoft_time " data-hour="1" data-minute="0">01:00</div><div class="xdsoft_time " data-hour="2" data-minute="0">02:00</div><div class="xdsoft_time " data-hour="3" data-minute="0">03:00</div><div class="xdsoft_time " data-hour="4" data-minute="0">04:00</div><div class="xdsoft_time " data-hour="5" data-minute="0">05:00</div><div class="xdsoft_time " data-hour="6" data-minute="0">06:00</div><div class="xdsoft_time " data-hour="7" data-minute="0">07:00</div><div class="xdsoft_time " data-hour="8" data-minute="0">08:00</div><div class="xdsoft_time " data-hour="9" data-minute="0">09:00</div><div class="xdsoft_time " data-hour="10" data-minute="0">10:00</div><div class="xdsoft_time " data-hour="11" data-minute="0">11:00</div><div class="xdsoft_time " data-hour="12" data-minute="0">12:00</div><div class="xdsoft_time " data-hour="13" data-minute="0">13:00</div><div class="xdsoft_time " data-hour="14" data-minute="0">14:00</div><div class="xdsoft_time " data-hour="15" data-minute="0">15:00</div><div class="xdsoft_time " data-hour="16" data-minute="0">16:00</div><div class="xdsoft_time " data-hour="17" data-minute="0">17:00</div><div class="xdsoft_time " data-hour="18" data-minute="0">18:00</div><div class="xdsoft_time " data-hour="19" data-minute="0">19:00</div><div class="xdsoft_time " data-hour="20" data-minute="0">20:00</div><div class="xdsoft_time " data-hour="21" data-minute="0">21:00</div><div class="xdsoft_time " data-hour="22" data-minute="0">22:00</div><div class="xdsoft_time " data-hour="23" data-minute="0">23:00</div></div><div class="xdsoft_scrollbar"><div class="xdsoft_scroller" style="display: block; height: 10px; margin-top: 0px;"></div></div></div><button type="button" class="xdsoft_next"></button></div></div></body></html>

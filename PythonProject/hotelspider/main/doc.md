@@ -1,0 +1,2 @@
+##查询某个城市下的酒店
+http://www.kaiyuanhotels.com.cn/m/hotel/searchHotelDetail.htm?hotelUtil.city.name=北京&hotelUtil.arrDate=2016-06-15&hotelUtil.depDate=2016-06-16&hotelUtil.businessZone.name=&hotelUtil.district.name=&protocolNo=0
