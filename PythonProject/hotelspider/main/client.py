@@ -4,12 +4,18 @@ import requests
 import json,time
 from bs4 import BeautifulSoup
 import threading
-
+from multiprocessing.dummy import Pool
 
 
 with open('city.txt', encoding='utf-8') as city_file:
     json_str = city_file.read()
     map_citys = json.loads(json_str)
+
+def getSpideHtmlByCityPy(cityPy):
+    url = r'http://www.kaiyuanhotels.com.cn/web/rate/roomRate.htm?source=WEB&t=1465977163526&corprateStatus=0&hotelCode={0}&arrDateStr={1}&depDateStr={2}'.format(cityPy)
+    return url
+
+
 
 def spiderhotel(cityPy,startTime,endTime):
 
@@ -125,8 +131,8 @@ def check_exist_path(path):
 if __name__ == '__main__':
     res  =''
     res+=str(time.time())+'\n'
-
-    while(True):
+    print(getSpideHtmlByCityPy('hello'))
+    while(False):
         printMainMenu()
         choose_menu = input()
         with open('city.txt',encoding='utf-8') as city_file:
@@ -152,18 +158,23 @@ if __name__ == '__main__':
                             print('写入文件'+f.name+'完成')
                             f.write('\n---------------------------------\n')
                     elif(map_citys.get(choose_menu.upper(),None)):
+                            k = choose_menu.upper()
+                            hotel_name = map_citys.get(choose_menu.upper())
+                            print(k)
                             start_day = print_input_start_time()
                             end_day = print_input_end_time()
                             print('正在爬取中：...')
-                            print('爬取{} '.format(map_citys.get(k,None)))
-                            f.write(str(time.strftime("%Y-%m-%d %H:%M:%S", ))+'\n:爬取: '+str(map_citys[k])+'\n')
-                            f.write('起止{0},截止{1}'.format(start_day,end_day))
+                            print('爬取{} '.format(hotel_name))
+                            single_file = open(hotel_name+'.txt','w+',encoding='utf-8')
+                            single_file.write(str(time.strftime("%Y-%m-%d %H:%M:%S", ))+'\n:爬取: '+str(map_citys[k])+'-----')
+                            single_file.write('起止{0},截止{1}\n'.format(start_day,end_day))
                             single_res = spiderhotel(k,start_day,end_day)
                             print(single_res)
                             print('分析完成:')
-                            f.write(single_res)
-                            f.write('\n---------------------------------\n')
-                            print('写入文件'+f.name+'完成')
+                            single_file.write(single_res)
+                            single_file.write('\n---------------------------------\n')
+                            single_file.close()
+                            print('写入文件'+single_file.name+'完成')
                     elif(choose_menu.upper() == 'Q'):
                         print('直接看city.txt')
                         break
